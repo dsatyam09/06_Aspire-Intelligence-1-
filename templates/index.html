@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+           <h3>Gender</h3><br><select name="Gender" class="resea" required="required">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Non Binary">Non Binary</option>
+                <option value="Prefer Not to answer">Prefer Not to answer</option>
+            </select>
+            <h3>Age</h3><br><select name="Age" class="resea" required="required">
+                <option value="26 to 35 years old">26 to 35 years old</option>
+                <option value="16 to 25 years old">16 to 25 years old</option>
+                <option value="36 to 45 years old">36 to 45 years old</option>
+                <option value="Over 45 years old">Over 45 years old</option>
+
+            </select>
+            <h3>Geography</h3><br><select name="Geography" class="resea" required="required">
+                <option value="City center or metropolitan area">City center or metropolitan area</option>
+                <option value="Suburban/Peri-urban">Suburban/Peri-urban</option>
+                <option value="Rural ">Rural </option>
+            </select>
+            <h3>Education</h3><br><select name="Education" class="resea" required="required">
+                <option value="University or college degree completed">University or college degree completed</option>
+                <option value="University or college degree completed">University or college degree completed</option>
+                <option value="Secondary school/ high school completed">Secondary school/ high school completed</option>
+                <option value="Technical school diploma or degree completed">Technical school diploma or degree completed</option>
+                <option value="Some university or college">Some university or college</option>
+                <option value="Some technical education (e.g polytechnic school)">Some technical education (e.g polytechnic school)</option>
+                <option value="some secondary school / high school">some secondary school / high school</option>
+                <option value="Post-graduate education">Post-graduate education</option>
+                <option value="Primary school completed">Primary school completed</option>
+                <option value="Prefer not to answer">Prefer not to answer</option>
+                <option value="Some primary education">Some primary education</option>
+                <option value="No formal education">No formal education</option>
+                
+            </select>
+            <h3>Employment Status</h3><br><select name="Employment_Status" class="resea" required="required">
+                <option value="I work part-time, either as an employee or self-employed">I work part-time, either as an employee or self-employed</option>
+                <option value="I work full-time, either as an employee or self-employed">I work full-time, either as an employee or self-employed</option>
+                <option value="I am unemployed">I am unemployed</option>
+                <option value="I am a student">I am a student</option>
+                <option value="I am a student and I work part-time">I am a student and I work part-time</option>
+                <option value="I do housework, fulfilling domestic tasks, looking after children">I do housework, fulfilling domestic tasks, looking after children</option>
+                <option value="None of the above">None of the above</option>
+                <option value="I am retired">I am retired</option>
+                <option value="I am unable to work due to long-term illness or disability">I am unable to work due to long-term illness or disability</option>
+                <option value="I am doing community or military service">I am doing community or military service</option>
+            </select>
+            
+            <br><br><button id="sub" type="submit ">Predict Financial Status</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
